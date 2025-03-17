@@ -1,0 +1,819 @@
+<script>window.enableEventObserver=true</script>
+<script src="https://cdn03.jotfor.ms/static/prototype.forms.js?v=3.3.61747" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/static/jotform.forms.js?v=3.3.61747" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.61747" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.61747" type="text/javascript" defer></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/imageinfo.js?v=3.3.61747" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/file-uploader/fileuploader.js?v=3.3.61747" type="text/javascript"></script>
+
+<script src="https://cdn03.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.61747" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/errorNavigation.js?v=3.3.61747" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. <br> Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.newPaymentUI = true;
+	JotForm.originalLanguage = "es";
+	JotForm.isFormViewTrackingAllowed = true;
+	JotForm.replaceTagTest = true;
+	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
+
+   JotForm.setConditions([{"action":[{"id":"action_0_1742196465829","visibility":"ShowMultiple","isError":false,"fields":["66","67","68","70"]}],"id":"1742196388945","index":"0","link":"Any","priority":"0","terms":[{"id":"term_0_1742196465829","field":"52","operator":"equals","value":"persona jurídica","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742196680751","visibility":"ShowMultiple","isError":false,"fields":["53","61","62","71"]}],"id":"1742195982010","index":"1","link":"Any","priority":"1","terms":[{"id":"term_0_1742196680751","field":"52","operator":"equals","value":"persona física","isError":false}],"type":"field"},{"action":[{"id":"action_1742195850933","visibility":"Show","isError":false,"field":"51"}],"id":"1742195878982","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1742195850933","field":"49","operator":"equals","value":"persona jurídica","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742196227112","visibility":"Show","isError":false,"field":"50"}],"id":"1742195841266","index":"3","link":"Any","priority":"3","terms":[{"id":"term_0_1742196227112","field":"49","operator":"equals","value":"persona física","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194597130","visibility":"ShowMultiple","isError":false,"fields":["45","43","59","60"]}],"id":"1742194443504","index":"4","link":"Any","priority":"4","terms":[{"id":"term_0_1742194597130","field":"46","operator":"equals","value":"persona física","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194830889","visibility":"ShowMultiple","isError":false,"fields":["44","59","60","65","63","64"]}],"id":"1742194526952","index":"5","link":"Any","priority":"5","terms":[{"id":"term_0_1742194830889","field":"46","operator":"equals","value":"persona jurídica","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194477365","visibility":"Show","isError":false,"field":"40"}],"id":"1742194477365","index":"6","link":"Any","priority":"6","terms":[{"id":"term_0_1742194477365","field":"39","operator":"equals","value":"persona física","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194474337","visibility":"Show","isError":false,"field":"40"}],"id":"1742194474337","index":"7","link":"Any","priority":"7","terms":[{"id":"term_0_1742194474337","field":"39","operator":"equals","value":"persona física","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194375907","visibility":"Show","isError":false,"field":"42"}],"id":"1742194364104","index":"8","link":"Any","priority":"8","terms":[{"id":"term_0_1742194375907","field":"39","operator":"equals","value":"persona jurídica","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194244884","visibility":"ShowMultiple","isError":false,"fields":["39","46","4","8"]}],"id":"1742193959247","index":"9","link":"Any","priority":"9","terms":[{"id":"term_0_1742194244884","field":"3","operator":"equals","value":"luz","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742196907106","visibility":"ShowMultiple","isError":false,"fields":["5","9","49","52"]}],"id":"1742194007487","index":"10","link":"Any","priority":"10","terms":[{"id":"term_0_1742196907106","field":"3","operator":"equals","value":"gas","isError":false}],"type":"field"},{"action":[{"id":"action_0_1742194275859","visibility":"ShowMultiple","isError":false,"fields":["39","49","46","52","4","5","8","9"]}],"id":"1742194012140","index":"11","link":"Any","priority":"11","terms":[{"id":"term_0_1742194275859","field":"3","operator":"equals","value":"ambos","isError":false}],"type":"field"},{"action":[{"id":"action_1742145773913","visibility":"ShowMultiple","isError":false,"fields":["23","13","14","15","16","17","18"]}],"id":"1742145833800","index":"12","link":"Any","priority":"12","terms":[{"id":"term_1742145773913","field":"11","operator":"equals","value":"domiciliado nueva cuenta","isError":false}],"type":"field"},{"action":[{"id":"action_1742145195909","visibility":"Show","isError":false,"field":"11"}],"id":"1742145216294","index":"13","link":"Any","priority":"13","terms":[{"id":"term_1742145195909","field":"3","operator":"isFilled","value":"","isError":false}],"type":"field"}]);	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+	window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":250744363468059,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true,"formLanguage":"es"})});	JotForm.isFullSource = true;
+
+	JotForm.init(function(){
+	/*INIT-START*/
+if (window.JotForm && JotForm.accessible) $('input_4').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_4', '\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_5').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_5', '\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_42').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_45').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_44').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_65').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_63').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_59').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_59', '\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_51').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_53').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_66').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_67').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_68').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_61').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_61', '\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_13').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_13', '\u0040\u0040\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_14').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_14', '\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_15').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_15', '\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_16').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_16', '\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_17').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_17', '\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_18').setAttribute('tabindex',0);
+      JotForm.setInputTextMasking( 'input_18', '\u0023\u0023\u0023\u0023' );
+      JotForm.alterTexts({"ageVerificationError":"Debe ser mayor de {minAge} años para enviar este formulario.","alphabetic":"Este campo solo puede contener letras.","alphanumeric":"Este campo solo puede contener letras y números.","cancelAppointment":"Cancelar cita","cancelSelection":"Cancelar selección","ccDonationMinLimitError":"La cantidad mínima es {minAmount} {currency}","ccInvalidCVC":"El número CVC no es válido.","ccInvalidExpireDate":"La fecha de expiración no es válida","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccInvalidNumber":"El número de su tarjeta de crédito no es válido.","ccMissingDetails":"Por favor llene los datos de su tarjeta de crédito.","ccMissingDonation":"Escriba los valores numéricos de la cantidad a donar.","ccMissingProduct":"Por favor seleccione al menos un producto.","characterLimitError":"Demasiados caracteres. El límite es","characterMinLimitError":"Muy pocos caracteres. El mínimum es","chooseAFile_infoMessage":"Elegir un archivo","confirmClearForm":"¿Está seguro que desea limpiar el formulario?","confirmEmail":"El correo electrónico no coincide","currency":"Este campo sólo puede contener valores de moneda.","cyrillic":"Este campo solo puede contener caracteres cirílicos.","dateInvalid":"Esta fecha no es valida. El formato de fecha es {format}","dateInvalidSeparate":"Esta fecha no es válida. Ponga una {element} válida","dateLimited":"Esta fecha no está disponible.","disallowDecimals":"Por favor, introduzca un número entero.","doneButton":"Listo","doneMessage":"Bien hecho! Todos los errores resueltos.","dragAndDropFilesHere_infoMessage":"Arrastre y suelte archivos aquí","email":"Introduzca una dirección e-mail válida","error":"error","fieldError":"El campo tiene un error.","fillMask":"El valor de este campo debe llenar la mascara","formerSelectedTime":"Hora anterior","freeEmailError":"No se permiten cuentas de correo gratuitas","generalError":"Existen errores en el formulario, por favor corríjalos antes de continuar.","generalPageError":"Hay errores en esta página. Por favor, corríjalos antes de continuar.","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoNotAvailableTitle":"Position Unavailable","geoPermissionDesc":"Check your browser's privacy settings.","geoPermissionTitle":"Permission Denied","geoTimeoutDesc":"Please check your internet connection and try again.","geoTimeoutTitle":"Timeout","gradingScoreError":"El puntaje total debería ser sólo \"menos que\" o \"igual que\"","incompleteFields":"Existen campos requeridos incompletos. Por favor complételos.","inputCarretErrorA":"La entrada no debe ser inferior al valor mínimo:","inputCarretErrorB":"La entrada debe ser menor al valor:","invalidTime":"Introduzca una hora válida","justSoldOut":"Se acaba de agotar","lessThan":"Su puntuación debería ser menor o igual que","maxCharactersError":"The number of characters should not be more than the maximum value:","maxDigitsError":"El máximo de dígitos permitido es","maxFileSize_infoMessage":"Máximo tamaño de archivo","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"El número de caracteres no debería ser menos que el valor mínimo:","minSelectionsError":"El número mínimo de opciones obligatorias es","multipleError":"Hay {count} errores en esta página. Favor corregirlos antes de continuar.","multipleFileUploads_emptyError":"El archivo {file} está vacío; por favor, seleccione de nuevo los archivos sin él.","multipleFileUploads_fileLimitError":"Solo se permite subir {fileLimit} archivo(s)","multipleFileUploads_minSizeError":"El archivo {file} es demasiado pequeño, el tamaño mínimo es: {minSizeLimit}.","multipleFileUploads_onLeave":"Se están cargando los archivos, si cierra ahora, se cancelará dicha carga.","multipleFileUploads_sizeError":"El archivo {file} es demasiado grande; el tamaño del archivo no debe superar {sizeLimit}.","multipleFileUploads_typeError":"El archivo {file} posee una extensión no permitida. Solo están permitidas las extensiones {extensions}.","multipleFileUploads_uploadFailed":"Carga de archivo fallida, favor remover y cargar de nuevo.","nextButtonText":"Seguir","noSlotsAvailable":"No hay cupos disponibles","notEnoughStock":"No hay suficientes existencias para la selección actual","notEnoughStock_remainedItems":"No hay suficientes existencias para la selección actual (quedan {count} artículos)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"Este campo sólo admite valores numéricos.","oneError":"Hay {count} error en esta página. Favor corregirlo antes de continuar.","pastDatesDisallowed":"La fecha debe ser futura","pleaseWait":"Por favor, espere ...","prevButtonText":"Atrás","progressMiddleText":"de","required":"Este campo es obligatorio.","requiredLegend":"Todos los campos marcados con * son obligatorios y deben llenarse.","requireEveryCell":"Se requieren todas las celdas.","requireEveryRow":"Todas las filas son obligatorias.","requireOne":"Al menos un campo obligatorio.","restrictedDomain":"This domain is not allowed","reviewBackText":"Ir al formulario","reviewSubmitText":"Revisar y enviar","seeAllText":"Mostrar todos","seeErrorsButton":"Ver Errores","selectedTime":"Hora seleccionada","selectionSoldOut":"Selección agotada","slotUnavailable":"{time} del {date} que ha seleccionado no está disponible. Seleccione otro espacio.","soldOut":"Agotado","startButtonText":"COMENZAR","submissionLimit":"Lo sentimos. Sólo se permite una entrada. &lt;br&gt; Los envíos múltiples están deshabilitados para este formulario.","submitButtonText":"Enviar","subProductItemsLeft":"(quedan {count} productos)","uploadExtensions":"Solo puede subir los siguientes archivos:","uploadFilesize":"Tamaño del archivo no puede ser mayor que:","uploadFilesizemin":"Tamañao de archivo no puede ser menos de:","url":"Este campo solo contiene una URL válida.","validateEmail":"Usted necesita validar este e-mail","wordLimitError":"Demasiadas palabras. El límite es","wordMinLimitError":"Muy pocas palabras. El mínimo es"});
+      setTimeout(function() {
+          JotForm.initMultipleUploads();
+      }, 2);
+	/*INIT-END*/
+	});
+
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"cambio de titular luz\u002Fgas","type":"control_head"},{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},{"description":"","name":"tipoDe","qid":"3","subLabel":"","text":"tipo de suministro","type":"control_dropdown"},{"description":"","name":"referenciaDel","qid":"4","subLabel":"","text":"referencia del contrato de luz. ( lo encontrara en la factura)","type":"control_textbox"},{"description":"","name":"referenciaDel5","qid":"5","subLabel":"","text":"referencia del contrato de gas. ( lo encontrara en la factura)","type":"control_textbox"},null,null,{"description":"","name":"direccionDel","qid":"8","text":"Direccion del suministro de electricidad","type":"control_address"},{"description":"","name":"direccionDel9","qid":"9","text":"Direccion del suministro de gas","type":"control_address"},null,{"description":"","name":"formaDe","qid":"11","text":"forma de pago","type":"control_radio"},null,{"description":"","name":"nuevaCuenta","qid":"13","subLabel":"","text":"nueva cuenta EAN , dos letras y dos numeros. ","type":"control_textbox"},{"description":"","name":"nuevaCuenta14","qid":"14","subLabel":"","text":"nueva cuenta, cuatro numeros.","type":"control_textbox"},{"description":"","name":"nuevaCuenta15","qid":"15","subLabel":"","text":"nueva cuenta, cuatro numeros.","type":"control_textbox"},{"description":"","name":"nuevaCuenta16","qid":"16","subLabel":"","text":"nueva cuenta, cuatro numeros.","type":"control_textbox"},{"description":"","name":"nuevaCuenta17","qid":"17","subLabel":"","text":"nueva cuenta, cuatro numeros.","type":"control_textbox"},{"description":"","name":"nuevaCuenta18","qid":"18","subLabel":"","text":"nueva cuenta, cuatro numeros.","type":"control_textbox"},{"description":"","name":"titularActual19","qid":"19","subLabel":"","text":"titular actual  D.N.I, N.I.F.  (si persona fisica)","type":"control_fileupload"},{"description":"","name":"titularActual20","qid":"20","subLabel":"","text":"titular actual  D.N.I, N.I.F. representante ( si persona juridica)  ","type":"control_fileupload"},{"description":"","name":"titularActual21","qid":"21","subLabel":"","text":"titular actual  tarjeta fiscal  ( si persona juridica)  ","type":"control_fileupload"},{"description":"","name":"documentacionAdicional","qid":"22","subLabel":"","text":"documentacion adicional para acreditar derechos:  aporte. escritura de propiedad o copia simple, contrato de arrendamiento.","type":"control_fileupload"},{"description":"","name":"titularDe","qid":"23","text":"titular de la cuenta","type":"control_fullname"},{"name":"divisor","qid":"24","text":"Divisor","type":"control_divider"},null,null,null,{"name":"divisor28","qid":"28","text":"Divisor","type":"control_divider"},{"name":"encabezado","qid":"29","text":"","type":"control_head"},null,{"name":"divisor31","qid":"31","text":"Divisor","type":"control_divider"},{"name":"divisor32","qid":"32","text":"Divisor","type":"control_divider"},null,{"description":"","name":"facturaActual","qid":"34","subLabel":"","text":"factura actual luz y o gas. puede adjuntar varios archivos.","type":"control_fileupload"},null,null,null,null,{"description":"","name":"titularActual39","qid":"39","text":"titular ACTUAL LUZ","type":"control_radio"},{"description":"","name":"titularActual40","qid":"40","text":"titular ACTUAL LUZ nombre y apellidos","type":"control_fullname"},null,{"description":"","name":"titularActual42","qid":"42","subLabel":"","text":"titular ACTUAL LUZ razon social ","type":"control_textbox"},{"description":"","name":"nuevoTitular43","qid":"43","text":"NUEVO TITULAR LUZ nombre y apellidos","type":"control_fullname"},{"description":"","name":"nuevoTitular44","qid":"44","subLabel":"","text":"NUEVO TITULAR LUZ C.I.F. ","type":"control_textbox"},{"description":"","name":"dninifNuevo","qid":"45","subLabel":"","text":"D.N.I.\u002FN.I.F. NUEVO TITULAR LUZ ","type":"control_textbox"},{"description":"","name":"nuevoTitular46","qid":"46","text":"NUEVO TITULAR  LUZ","type":"control_radio"},{"name":"divisor47","qid":"47","text":"Divisor","type":"control_divider"},{"name":"divisor48","qid":"48","text":"Divisor","type":"control_divider"},{"description":"","name":"titularActual","qid":"49","text":"titular ACTUAL GAS","type":"control_radio"},{"description":"","name":"titularActual50","qid":"50","text":"titular ACTUAL GAS nombre y apellidos","type":"control_fullname"},{"description":"","name":"titularActual51","qid":"51","subLabel":"","text":"titular ACTUAL GAS razon social ","type":"control_textbox"},{"description":"","name":"nuevoTitular","qid":"52","text":"NUEVO TITULAR  GAS","type":"control_radio"},{"description":"","name":"dninifNuevo53","qid":"53","subLabel":"","text":"D.N.I.\u002FN.I.F. NUEVO TITULAR GAS ","type":"control_textbox"},null,null,{"name":"divisor56","qid":"56","text":"Divisor","type":"control_divider"},{"name":"divisor57","qid":"57","text":"Divisor","type":"control_divider"},{"name":"divisor58","qid":"58","text":"Divisor","type":"control_divider"},{"description":"","name":"telefono","qid":"59","subLabel":"","text":"telefono","type":"control_textbox"},{"description":"","name":"email","qid":"60","subLabel":"","text":"Email","type":"control_email"},{"description":"","name":"telefono61","qid":"61","subLabel":"","text":"telefono","type":"control_textbox"},{"description":"","name":"email62","qid":"62","subLabel":"","text":"Email","type":"control_email"},{"description":"","name":"nuevoTitular63","qid":"63","subLabel":"","text":"NUEVO TITULAR LUZ DNI representante ","type":"control_textbox"},{"description":"","name":"nuevoTitular64","qid":"64","text":"NUEVO TITULAR LUZ nombre y apellidos representante","type":"control_fullname"},{"description":"","name":"nuevoTitular65","qid":"65","subLabel":"","text":"NUEVO TITULAR LUZ razon social","type":"control_textbox"},{"description":"","name":"nuevoTitular66","qid":"66","subLabel":"","text":"NUEVO TITULAR GAS C.I.F. ","type":"control_textbox"},{"description":"","name":"nuevoTitular67","qid":"67","subLabel":"","text":"NUEVO TITULAR GAS razon social","type":"control_textbox"},{"description":"","name":"nuevoTitular68","qid":"68","subLabel":"","text":"NUEVO TITULAR GAS DNI representante ","type":"control_textbox"},null,{"description":"","name":"nuevoTitular70","qid":"70","text":"NUEVO TITULAR GAS nombre y apellidos representante","type":"control_fullname"},{"description":"","name":"nuevoTitular71","qid":"71","text":"NUEVO TITULAR GAS nombre y apellidos ","type":"control_fullname"}]);}, 20); 
+</script>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=1a13fd0
+"/>
+<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.61747"/>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_styles.css?3.3.61747" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_feature.css?3.3.61747" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+
+/* Begining of advanced designer */
+/*PREFERENCES STYLE*/
+/*  1 - Preferences style */
+/*  1 - FONT FAMILY */
+.form-all {
+  font-family: "Inter", sans-serif;
+}
+/* 2 - FORM WIDTH */
+.form-all {
+  max-width: 752px;
+}
+/* 5 - FONT SIZE */
+.form-all {
+  font-size: 16px;
+}
+/* 5 - input bg color */
+.form-textbox,
+.form-textarea,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+  background-color: #ffffff;
+}
+/* 10 - LINE SPACING */
+.form-line {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.supernova .form-all,
+.form-all {
+  background-color: #f4ffe0;
+}
+.supernova {
+  background-color: #7c9e3d;
+}
+.supernova body {
+  background-color: transparent;
+}
+.form-all,
+.form-label-top,
+.form-label-left,
+.form-label-right,
+.form-html,
+.form-checkbox-item label,
+.form-radio-item label,
+span.FITB .qb-checkbox-label,
+span.FITB .qb-radiobox-label,
+span.FITB .form-radio label,
+span.FITB .form-checkbox label,
+[data-blotid][data-type=checkbox] [data-labelid],
+[data-blotid][data-type=radiobox] [data-labelid],
+span.FITB-inptCont[data-type=checkbox] label,
+span.FITB-inptCont[data-type=radiobox] label,
+.form-sub-label {
+  color: #46552a;
+}
+/*PREFERENCES STYLE*/
+/* 17 - INPUT WIDTHS */
+/*  20 - FORM PADDING */
+ul.form-section {
+  padding: 0px 38px;
+}
+/* Heights */
+/* 11 - LINE PADDING */
+/* LABEL STYLE */
+/* 12 - ROUNDED INPUTS */
+.supernova .form-all,
+.form-all {
+  border-radius: 3px;
+}
+.form-section:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.form-section:last-child {
+  border-radius: 0 0 3px 3px;
+}
+.form-radio-item,
+.form-checkbox-item {
+  padding-bottom: 0px;
+}
+.form-radio-item:last-child,
+.form-checkbox-item:last-child {
+  padding-bottom: 0;
+}
+.form-checkbox-item .form-checkbox + label,
+.form-checkbox-item .form-checkbox + span {
+  padding-left: 30px;
+}
+.form-radio-item .form-radio + label,
+.form-radio-item .form-radio + span {
+  padding-left: 30px;
+}
+.form-single-column .form-checkbox-item,
+.form-single-column .form-radio-item {
+  width: 100%;
+}
+.form-checkbox-item .editor-container div,
+.form-radio-item .editor-container div {
+  position: relative;
+}
+.form-checkbox-item .editor-container div:before,
+.form-radio-item .editor-container div:before {
+  display: inline-block;
+  vertical-align: middle;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.form-radio-item:not(#foo),
+.form-checkbox-item:not(#foo) {
+  position: relative;
+}
+.form-radio-item:not(#foo) .form-radio + span:before,
+.form-checkbox-item:not(#foo) .form-radio + span:before,
+.form-radio-item:not(#foo) .form-radio + span:after,
+.form-checkbox-item:not(#foo) .form-radio + span:after,
+.form-radio-item:not(#foo) .form-radio:checked + span div:after,
+.form-checkbox-item:not(#foo) .form-radio:checked + span div:after,
+.form-radio-item:not(#foo) .form-checkbox + span:before,
+.form-checkbox-item:not(#foo) .form-checkbox + span:before,
+.form-radio-item:not(#foo) .form-checkbox + span:after,
+.form-checkbox-item:not(#foo) .form-checkbox + span:after,
+.form-radio-item:not(#foo) .form-checkbox:checked + span div:after,
+.form-checkbox-item:not(#foo) .form-checkbox:checked + span div:after {
+  display: none;
+}
+.form-radio-item:not(#foo) .form-radio + label:after,
+.form-checkbox-item:not(#foo) .form-radio + label:after,
+.form-radio-item:not(#foo) .form-radio + span:after,
+.form-checkbox-item:not(#foo) .form-radio + span:after,
+.form-radio-item:not(#foo) .form-checkbox + label:after,
+.form-checkbox-item:not(#foo) .form-checkbox + label:after,
+.form-radio-item:not(#foo) .form-checkbox + span:after,
+.form-checkbox-item:not(#foo) .form-checkbox + span:after {
+  opacity: 1;
+  transform: scale(1);
+}
+.form-radio-item:not(#foo) label:after,
+.form-checkbox-item:not(#foo) label:after {
+  background-color: #ffffff;
+}
+.form-radio-item:not(#foo) .form-checkbox + label,
+.form-checkbox-item:not(#foo) .form-checkbox + label,
+.form-radio-item:not(#foo) .form-checkbox + span,
+.form-checkbox-item:not(#foo) .form-checkbox + span,
+.form-radio-item:not(#foo) .form-radio + label,
+.form-checkbox-item:not(#foo) .form-radio + label,
+.form-radio-item:not(#foo) .form-radio + span,
+.form-checkbox-item:not(#foo) .form-radio + span {
+  padding-left: 50px;
+}
+.form-radio-item:not(#foo) label,
+.form-checkbox-item:not(#foo) label {
+  float: left;
+}
+.form-radio-item:not(#foo) label:before,
+.form-checkbox-item:not(#foo) label:before,
+.form-radio-item:not(#foo) .editor-container div:before,
+.form-checkbox-item:not(#foo) .editor-container div:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  vertical-align: baseline;
+  border-radius: 12px;
+  top: 0;
+  left: 4px;
+  width: 36px;
+  height: 22px;
+  cursor: pointer;
+  background: #C3CAD8;
+}
+.form-radio-item:not(#foo) label:after,
+.form-checkbox-item:not(#foo) label:after,
+.form-radio-item:not(#foo) .editor-container div:after,
+.form-checkbox-item:not(#foo) .editor-container div:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 3px;
+  left: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 12px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.form-radio-item:not(#foo) input:checked + label:before,
+.form-checkbox-item:not(#foo) input:checked + label:before {
+  background: #487bff;
+}
+.form-radio-item:not(#foo) input:checked + label:after,
+.form-checkbox-item:not(#foo) input:checked + label:after {
+  left: 20px;
+}
+.submit-button {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: inherit;
+}
+.submit-button {
+  min-width: 180px;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.form-all .form-pagebreak-back,
+.form-all .form-pagebreak-next {
+  min-width: 128px;
+}
+li[data-type="control_image"] div {
+  text-align: left;
+}
+li[data-type="control_image"] img {
+  border: none;
+  border-width: 0px !important;
+  border-style: solid !important;
+  border-color: false !important;
+}
+.supernova {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: auto;
+  background-size: cover;
+}
+.supernova {
+  background-image: none;
+}
+#stage {
+  background-image: none;
+}
+/* | */
+.form-all {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+}
+.form-header-group {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
+}
+.header-large h1.form-header {
+  font-size: 2em;
+}
+.header-large h2.form-header {
+  font-size: 1.5em;
+}
+.header-large h3.form-header {
+  font-size: 1.17em;
+}
+.header-large h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-large h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-large h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-default h1.form-header {
+  font-size: 2em;
+}
+.header-default h2.form-header {
+  font-size: 1.5em;
+}
+.header-default h3.form-header {
+  font-size: 1.17em;
+}
+.header-default h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-default h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-default h3 + .form-subHeader {
+  font-size: .75em;
+}
+.header-small h1.form-header {
+  font-size: 2em;
+}
+.header-small h2.form-header {
+  font-size: 1.5em;
+}
+.header-small h3.form-header {
+  font-size: 1.17em;
+}
+.header-small h1 + .form-subHeader {
+  font-size: 1em;
+}
+.header-small h2 + .form-subHeader {
+  font-size: .875em;
+}
+.header-small h3 + .form-subHeader {
+  font-size: .75em;
+}
+.form-header-group {
+  text-align: left;
+}
+div.form-header-group.header-large,
+div.form-header-group.hasImage {
+  margin: 0px -38px;
+}
+div.form-header-group.header-large,
+div.form-header-group.hasImage {
+  padding: 40px 52px;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: #46552a;
+}
+.form-line-error {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #ffd6d6;
+}
+.form-line-error .form-error-message {
+  background-color: #f23a3c;
+  clear: both;
+  float: none;
+}
+.form-line-error .form-error-message .form-error-arrow {
+  border-bottom-color: #f23a3c;
+}
+.form-line-error input:not(#coupon-input),
+.form-line-error textarea,
+.form-line-error .form-validation-error {
+  border: 1px solid #f23a3c;
+  box-shadow: 0 0 3px #f23a3c;
+}
+.form-line-error {
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -ms-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #ffd6d6;
+}
+.form-header-group .form-header,
+.form-header-group .form-subHeader {
+  color: #46552a;
+}
+.form-line-active {
+  background-color: #f1f5ff;
+}
+/* 29 - FORM COLUMNS */
+
+/*__INSPECT_SEPERATOR__*/
+
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://eu-submit.jotform.com/submit/250744363468059" method="post" enctype="multipart/form-data" name="form_250744363468059" id="250744363468059" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="250744363468059" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1742197121509" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1742197121509" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
+  <div id="formCoverLogo" style="margin-bottom:32px" class="form-cover-wrapper form-has-cover form-page-cover-image-align-center">
+    <div class="form-page-cover-image-wrapper" style="max-width:752px"><img src="https://www.jotform.com/uploads/clementesl/form_files/AAFF%20LOGOTIPO%20COLABORADOR%20OFICIAL%20HORIZONTAL%20PRINCIPAL%2002%20RGB%20PANGEA%20BOLD%20ecsl.67d6f333d71596.74996697.png" class="form-page-cover-image" width="411" height="87" alt="cambio de titular luz/gas Logo" style="aspect-ratio:411/87" /></div>
+  </div>
+  <div role="main" class="form-all">
+    <ul class="form-section page-section" role="presentation">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_1" class="form-header" data-component="header">cambio de titular luz/gas</h1>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_dropdown" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="input_3" aria-hidden="false"> tipo de suministro </label>
+        <div id="cid_3" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_3" name="q3_tipoDe" style="width:310px" data-component="dropdown" aria-label="tipo de suministro">
+            <option value="">Seleccione</option>
+            <option value="luz">luz</option>
+            <option value="gas">gas</option>
+            <option value="ambos">ambos</option>
+          </select> </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_textbox" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false"> referencia del contrato de luz. ( lo encontrará en la factura) </label>
+        <div id="cid_4" class="form-input-wide" data-layout="half"> <input type="text" id="input_4" name="q4_referenciaDel" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_4" value="" /> </div>
+      </li>
+      <li class="form-line form-field-hidden" style="display:none;" data-type="control_textbox" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> referencia del contrato de gas. ( lo encontrará en la factura) </label>
+        <div id="cid_5" class="form-input-wide" data-layout="half"> <input type="text" id="input_5" name="q5_referenciaDel5" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_5" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_32">
+        <div id="cid_32" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_radio" id="id_39"><label class="form-label form-label-top form-label-auto" id="label_39" aria-hidden="false"> titular ACTUAL LUZ </label>
+        <div id="cid_39" class="form-input-wide always-hidden" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_39" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_39" type="radio" class="form-radio" id="input_39_0" name="q39_titularActual39" value="persona física" /><label id="label_input_39_0" for="input_39_0">persona física</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_39" type="radio" class="form-radio" id="input_39_1" name="q39_titularActual39" value="persona jurídica" /><label id="label_input_39_1" for="input_39_1">persona jurídica</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_40"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_40" for="first_40" aria-hidden="false"> titular ACTUAL LUZ nombre y apellidos </label>
+        <div id="cid_40" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_40" name="q40_titularActual40[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_40 given-name" size="10" data-component="first" aria-labelledby="label_40 sublabel_40_first" value="" /><label class="form-sub-label" for="first_40" id="sublabel_40_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_40" name="q40_titularActual40[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_40 additional-name" size="10" data-component="middle" aria-labelledby="label_40 sublabel_40_middle" value="" /><label class="form-sub-label" for="middle_40" id="sublabel_40_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_40" name="q40_titularActual40[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_40 family-name" size="15" data-component="last" aria-labelledby="label_40 sublabel_40_last" value="" /><label class="form-sub-label" for="last_40" id="sublabel_40_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_42"><label class="form-label form-label-top form-label-auto" id="label_42" for="input_42" aria-hidden="false"> titular ACTUAL LUZ razón social </label>
+        <div id="cid_42" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_42" name="q42_titularActual42" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_42" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_47">
+        <div id="cid_47" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_radio" id="id_46"><label class="form-label form-label-top form-label-auto" id="label_46" aria-hidden="false"> NUEVO TITULAR LUZ </label>
+        <div id="cid_46" class="form-input-wide always-hidden" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_46" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_46" type="radio" class="form-radio" id="input_46_0" name="q46_nuevoTitular46" value="persona física" /><label id="label_input_46_0" for="input_46_0">persona física</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_46" type="radio" class="form-radio" id="input_46_1" name="q46_nuevoTitular46" value="persona jurídica" /><label id="label_input_46_1" for="input_46_1">persona jurídica</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_45"><label class="form-label form-label-top form-label-auto" id="label_45" for="input_45" aria-hidden="false"> D.N.I./N.I.F. NUEVO TITULAR LUZ </label>
+        <div id="cid_45" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_45" name="q45_dninifNuevo" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_45" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_43"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_43" for="first_43" aria-hidden="false"> NUEVO TITULAR LUZ nombre y apellidos </label>
+        <div id="cid_43" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_43" name="q43_nuevoTitular43[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_43 given-name" size="10" data-component="first" aria-labelledby="label_43 sublabel_43_first" value="" /><label class="form-sub-label" for="first_43" id="sublabel_43_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_43" name="q43_nuevoTitular43[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_43 additional-name" size="10" data-component="middle" aria-labelledby="label_43 sublabel_43_middle" value="" /><label class="form-sub-label" for="middle_43" id="sublabel_43_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_43" name="q43_nuevoTitular43[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_43 family-name" size="15" data-component="last" aria-labelledby="label_43 sublabel_43_last" value="" /><label class="form-sub-label" for="last_43" id="sublabel_43_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_44"><label class="form-label form-label-top form-label-auto" id="label_44" for="input_44" aria-hidden="false"> NUEVO TITULAR LUZ C.I.F. </label>
+        <div id="cid_44" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_44" name="q44_nuevoTitular44" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_44" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_65"><label class="form-label form-label-top form-label-auto" id="label_65" for="input_65" aria-hidden="false"> NUEVO TITULAR LUZ razón social </label>
+        <div id="cid_65" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_65" name="q65_nuevoTitular65" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_65" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_63"><label class="form-label form-label-top form-label-auto" id="label_63" for="input_63" aria-hidden="false"> NUEVO TITULAR LUZ DNI representante </label>
+        <div id="cid_63" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_63" name="q63_nuevoTitular63" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_63" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_64"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_64" for="first_64" aria-hidden="false"> NUEVO TITULAR LUZ nombre y apellidos representante </label>
+        <div id="cid_64" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_64" name="q64_nuevoTitular64[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_64 given-name" size="10" data-component="first" aria-labelledby="label_64 sublabel_64_first" value="" /><label class="form-sub-label" for="first_64" id="sublabel_64_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_64" name="q64_nuevoTitular64[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_64 additional-name" size="10" data-component="middle" aria-labelledby="label_64 sublabel_64_middle" value="" /><label class="form-sub-label" for="middle_64" id="sublabel_64_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_64" name="q64_nuevoTitular64[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_64 family-name" size="15" data-component="last" aria-labelledby="label_64 sublabel_64_last" value="" /><label class="form-sub-label" for="last_64" id="sublabel_64_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_59"><label class="form-label form-label-top form-label-auto" id="label_59" for="input_59" aria-hidden="false"> teléfono </label>
+        <div id="cid_59" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_59" name="q59_telefono" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_59" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_email" id="id_60"><label class="form-label form-label-top form-label-auto" id="label_60" for="input_60" aria-hidden="false"> Email </label>
+        <div id="cid_60" class="form-input-wide always-hidden" data-layout="half"> <input type="email" id="input_60" name="q60_email" class="form-textbox validate[Email]" data-defaultvalue="" autoComplete="section-input_60 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_60" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_56">
+        <div id="cid_56" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_radio" id="id_49"><label class="form-label form-label-top form-label-auto" id="label_49" aria-hidden="false"> titular ACTUAL GAS </label>
+        <div id="cid_49" class="form-input-wide always-hidden" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_49" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_49" type="radio" class="form-radio" id="input_49_0" name="q49_titularActual" value="persona física" /><label id="label_input_49_0" for="input_49_0">persona física</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_49" type="radio" class="form-radio" id="input_49_1" name="q49_titularActual" value="persona jurídica" /><label id="label_input_49_1" for="input_49_1">persona jurídica</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_50"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_50" for="first_50" aria-hidden="false"> titular ACTUAL GAS nombre y apellidos </label>
+        <div id="cid_50" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_50" name="q50_titularActual50[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_50 given-name" size="10" data-component="first" aria-labelledby="label_50 sublabel_50_first" value="" /><label class="form-sub-label" for="first_50" id="sublabel_50_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_50" name="q50_titularActual50[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_50 additional-name" size="10" data-component="middle" aria-labelledby="label_50 sublabel_50_middle" value="" /><label class="form-sub-label" for="middle_50" id="sublabel_50_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_50" name="q50_titularActual50[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_50 family-name" size="15" data-component="last" aria-labelledby="label_50 sublabel_50_last" value="" /><label class="form-sub-label" for="last_50" id="sublabel_50_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_51"><label class="form-label form-label-top form-label-auto" id="label_51" for="input_51" aria-hidden="false"> titular ACTUAL GAS razón social </label>
+        <div id="cid_51" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_51" name="q51_titularActual51" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_51" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_57">
+        <div id="cid_57" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_radio" id="id_52"><label class="form-label form-label-top form-label-auto" id="label_52" aria-hidden="false"> NUEVO TITULAR GAS </label>
+        <div id="cid_52" class="form-input-wide always-hidden" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_52" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_52" type="radio" class="form-radio" id="input_52_0" name="q52_nuevoTitular" value="persona física" /><label id="label_input_52_0" for="input_52_0">persona física</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_52" type="radio" class="form-radio" id="input_52_1" name="q52_nuevoTitular" value="persona jurídica" /><label id="label_input_52_1" for="input_52_1">persona jurídica</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_53"><label class="form-label form-label-top form-label-auto" id="label_53" for="input_53" aria-hidden="false"> D.N.I./N.I.F. NUEVO TITULAR GAS </label>
+        <div id="cid_53" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_53" name="q53_dninifNuevo53" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_53" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_71"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_71" for="first_71" aria-hidden="false"> NUEVO TITULAR GAS nombre y apellidos </label>
+        <div id="cid_71" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_71" name="q71_nuevoTitular71[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_71 given-name" size="10" data-component="first" aria-labelledby="label_71 sublabel_71_first" value="" /><label class="form-sub-label" for="first_71" id="sublabel_71_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_71" name="q71_nuevoTitular71[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_71 additional-name" size="10" data-component="middle" aria-labelledby="label_71 sublabel_71_middle" value="" /><label class="form-sub-label" for="middle_71" id="sublabel_71_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_71" name="q71_nuevoTitular71[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_71 family-name" size="15" data-component="last" aria-labelledby="label_71 sublabel_71_last" value="" /><label class="form-sub-label" for="last_71" id="sublabel_71_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_66"><label class="form-label form-label-top form-label-auto" id="label_66" for="input_66" aria-hidden="false"> NUEVO TITULAR GAS C.I.F. </label>
+        <div id="cid_66" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_66" name="q66_nuevoTitular66" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_66" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_70"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_70" for="first_70" aria-hidden="false"> NUEVO TITULAR GAS nombre y apellidos representante </label>
+        <div id="cid_70" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_70" name="q70_nuevoTitular70[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_70 given-name" size="10" data-component="first" aria-labelledby="label_70 sublabel_70_first" value="" /><label class="form-sub-label" for="first_70" id="sublabel_70_first" style="min-height:13px">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_70" name="q70_nuevoTitular70[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_70 additional-name" size="10" data-component="middle" aria-labelledby="label_70 sublabel_70_middle" value="" /><label class="form-sub-label" for="middle_70" id="sublabel_70_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_70" name="q70_nuevoTitular70[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_70 family-name" size="15" data-component="last" aria-labelledby="label_70 sublabel_70_last" value="" /><label class="form-sub-label" for="last_70" id="sublabel_70_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_67"><label class="form-label form-label-top form-label-auto" id="label_67" for="input_67" aria-hidden="false"> NUEVO TITULAR GAS razón social </label>
+        <div id="cid_67" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_67" name="q67_nuevoTitular67" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_67" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_68"><label class="form-label form-label-top form-label-auto" id="label_68" for="input_68" aria-hidden="false"> NUEVO TITULAR GAS DNI representante </label>
+        <div id="cid_68" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_68" name="q68_nuevoTitular68" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_68" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_48">
+        <div id="cid_48" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_61"><label class="form-label form-label-top form-label-auto" id="label_61" for="input_61" aria-hidden="false"> teléfono </label>
+        <div id="cid_61" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_61" name="q61_telefono61" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_61" value="" /> </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_email" id="id_62"><label class="form-label form-label-top form-label-auto" id="label_62" for="input_62" aria-hidden="false"> Email </label>
+        <div id="cid_62" class="form-input-wide always-hidden" data-layout="half"> <input type="email" id="input_62" name="q62_email62" class="form-textbox validate[Email]" data-defaultvalue="" autoComplete="section-input_62 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_62" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_58">
+        <div id="cid_58" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_address" id="id_8" data-compound-hint=",,,,Seleccione,,Seleccione,"><label class="form-label form-label-top form-label-auto" id="label_8" for="input_8_addr_line1" aria-hidden="false"> Dirección del suministro de electricidad </label>
+        <div id="cid_8" class="form-input-wide always-hidden" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_8_addr_line1" name="q8_direccionDel[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_8 address-line1" data-component="address_line_1" aria-labelledby="label_8 sublabel_8_addr_line1" value="" /><label class="form-sub-label" for="input_8_addr_line1" id="sublabel_8_addr_line1" style="min-height:13px">Dirección de la calle</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_8_addr_line2" name="q8_direccionDel[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_8 off" data-component="address_line_2" aria-labelledby="label_8 sublabel_8_addr_line2" value="" /><label class="form-sub-label" for="input_8_addr_line2" id="sublabel_8_addr_line2" style="min-height:13px">Dirección de la calle Línea 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_8_city" name="q8_direccionDel[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_8 address-level2" data-component="city" aria-labelledby="label_8 sublabel_8_city" value="" /><label class="form-sub-label" for="input_8_city" id="sublabel_8_city" style="min-height:13px">Municipio</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_8_state" name="q8_direccionDel[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_8 address-level1" data-component="state" aria-labelledby="label_8 sublabel_8_state" value="" /><label class="form-sub-label" for="input_8_state" id="sublabel_8_state" style="min-height:13px">Provincia</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_8_postal" name="q8_direccionDel[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_8 postal-code" data-component="zip" aria-labelledby="label_8 sublabel_8_postal" value="" /><label class="form-sub-label" for="input_8_postal" id="sublabel_8_postal" style="min-height:13px">Código Postal</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_31">
+        <div id="cid_31" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_address" id="id_9" data-compound-hint=",,,,Seleccione,,Seleccione,"><label class="form-label form-label-top form-label-auto" id="label_9" for="input_9_addr_line1" aria-hidden="false"> Dirección del suministro de gas </label>
+        <div id="cid_9" class="form-input-wide always-hidden" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_9_addr_line1" name="q9_direccionDel9[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_9 address-line1" data-component="address_line_1" aria-labelledby="label_9 sublabel_9_addr_line1" value="" /><label class="form-sub-label" for="input_9_addr_line1" id="sublabel_9_addr_line1" style="min-height:13px">Dirección de la calle</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_9_addr_line2" name="q9_direccionDel9[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_9 off" data-component="address_line_2" aria-labelledby="label_9 sublabel_9_addr_line2" value="" /><label class="form-sub-label" for="input_9_addr_line2" id="sublabel_9_addr_line2" style="min-height:13px">Dirección de la calle Línea 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_9_city" name="q9_direccionDel9[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_9 address-level2" data-component="city" aria-labelledby="label_9 sublabel_9_city" value="" /><label class="form-sub-label" for="input_9_city" id="sublabel_9_city" style="min-height:13px">Municipio</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_9_state" name="q9_direccionDel9[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_9 address-level1" data-component="state" aria-labelledby="label_9 sublabel_9_state" value="" /><label class="form-sub-label" for="input_9_state" id="sublabel_9_state" style="min-height:13px">Provincia</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_9_postal" name="q9_direccionDel9[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_9 postal-code" data-component="zip" aria-labelledby="label_9 sublabel_9_postal" value="" /><label class="form-sub-label" for="input_9_postal" id="sublabel_9_postal" style="min-height:13px">Código Postal</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_24">
+        <div id="cid_24" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_radio" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" aria-hidden="false"> forma de pago </label>
+        <div id="cid_11" class="form-input-wide always-hidden" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_11" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_11" type="radio" class="form-radio" id="input_11_0" name="q11_formaDe" value="domiciliado se mantiene la cuenta actual" /><label id="label_input_11_0" for="input_11_0">domiciliado se mantiene la cuenta actual</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_11" type="radio" class="form-radio" id="input_11_1" name="q11_formaDe" value="domiciliado nueva cuenta" /><label id="label_input_11_1" for="input_11_1">domiciliado nueva cuenta</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_11" type="radio" class="form-radio" id="input_11_2" name="q11_formaDe" value="no domiciliado" /><label id="label_input_11_2" for="input_11_2">no domiciliado</label></span></div>
+        </div>
+      </li>
+      <li class="form-line always-hidden form-field-hidden" style="display:none;" data-type="control_fullname" id="id_23"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_23" for="first_23" aria-hidden="false"> titular de la cuenta </label>
+        <div id="cid_23" class="form-input-wide always-hidden" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_23" name="q23_titularDe[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 given-name" size="10" data-component="first" aria-labelledby="label_23 sublabel_23_first" value="" /><label class="form-sub-label" for="first_23" id="sublabel_23_first" style="min-height:13px">Nombre o razón fiscal </label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_23" name="q23_titularDe[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 additional-name" size="10" data-component="middle" aria-labelledby="label_23 sublabel_23_middle" value="" /><label class="form-sub-label" for="middle_23" id="sublabel_23_middle" style="min-height:13px">Apellido 1</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_23" name="q23_titularDe[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 family-name" size="15" data-component="last" aria-labelledby="label_23 sublabel_23_last" value="" /><label class="form-sub-label" for="last_23" id="sublabel_23_last" style="min-height:13px">Apellido 2</label></span></div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="input_13" aria-hidden="false"> nueva cuenta EAN , dos letras y dos números. </label>
+        <div id="cid_13" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_13" name="q13_nuevaCuenta" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_13" value="" /> </div>
+      </li>
+      <li class="form-line form-line-column form-col-2 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_14"><label class="form-label form-label-top form-label-auto" id="label_14" for="input_14" aria-hidden="false"> nueva cuenta, cuatro números. </label>
+        <div id="cid_14" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_14" name="q14_nuevaCuenta14" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_14" value="" /> </div>
+      </li>
+      <li class="form-line form-line-column form-col-3 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="input_15" aria-hidden="false"> nueva cuenta, cuatro números. </label>
+        <div id="cid_15" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_15" name="q15_nuevaCuenta15" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_15" value="" /> </div>
+      </li>
+      <li class="form-line form-line-column form-col-4 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_16"><label class="form-label form-label-top form-label-auto" id="label_16" for="input_16" aria-hidden="false"> nueva cuenta, cuatro números. </label>
+        <div id="cid_16" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_16" name="q16_nuevaCuenta16" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_16" value="" /> </div>
+      </li>
+      <li class="form-line form-line-column form-col-5 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17" aria-hidden="false"> nueva cuenta, cuatro números. </label>
+        <div id="cid_17" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_17" name="q17_nuevaCuenta17" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_17" value="" /> </div>
+      </li>
+      <li class="form-line form-line-column form-col-6 always-hidden form-field-hidden" style="display:none;" data-type="control_textbox" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18" aria-hidden="false"> nueva cuenta, cuatro números. </label>
+        <div id="cid_18" class="form-input-wide always-hidden" data-layout="half"> <input type="text" id="input_18" name="q18_nuevaCuenta18" data-type="input-textbox" class="form-textbox validate[Fill Mask]" data-defaultvalue="" style="width:310px" size="310" data-masked="true" data-component="textbox" aria-labelledby="label_18" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_divider" id="id_28">
+        <div id="cid_28" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li id="cid_29" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_29" class="form-header" data-component="header" aria-hidden="true"></h2>
+            <div id="subHeader_29" class="form-subHeader">DOCUMENTACIÓN ADJUNTA, ADJUNTE LO QUE DISPONGA</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_34"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34" aria-hidden="false"> factura actual luz y o gas. puede adjuntar varios archivos. </label>
+        <div id="cid_34" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Buscar archivos<div class="jfUpload-heading forDesktop">Arrastre y suelte archivos aquí</div>
+                      <div class="jfUpload-heading forMobile">Elegir un archivo</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_34" name="q34_facturaActual[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Buscar archivos" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_19"><label class="form-label form-label-top form-label-auto" id="label_19" for="input_19" aria-hidden="false"> titular actual D.N.I, N.I.F. (si persona física) </label>
+        <div id="cid_19" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Buscar archivos<div class="jfUpload-heading forDesktop">Arrastre y suelte archivos aquí</div>
+                      <div class="jfUpload-heading forMobile">Elegir un archivo</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_19" name="q19_titularActual19[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Buscar archivos" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_20"><label class="form-label form-label-top form-label-auto" id="label_20" for="input_20" aria-hidden="false"> titular actual D.N.I, N.I.F. representante ( si persona jurídica) </label>
+        <div id="cid_20" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Buscar archivos<div class="jfUpload-heading forDesktop">Arrastre y suelte archivos aquí</div>
+                      <div class="jfUpload-heading forMobile">Elegir un archivo</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_20" name="q20_titularActual20[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Buscar archivos" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_21"><label class="form-label form-label-top form-label-auto" id="label_21" for="input_21" aria-hidden="false"> titular actual tarjeta fiscal ( si persona jurídica) </label>
+        <div id="cid_21" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Buscar archivos<div class="jfUpload-heading forDesktop">Arrastre y suelte archivos aquí</div>
+                      <div class="jfUpload-heading forMobile">Elegir un archivo</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_21" name="q21_titularActual21[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Buscar archivos" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_22"><label class="form-label form-label-top form-label-auto" id="label_22" for="input_22" aria-hidden="false"> documentación adicional para acreditar derechos: aporte. escritura de propiedad o copia simple, contrato de arrendamiento. </label>
+        <div id="cid_22" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Buscar archivos<div class="jfUpload-heading forDesktop">Arrastre y suelte archivos aquí</div>
+                      <div class="jfUpload-heading forMobile">Elegir un archivo</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_22" name="q22_documentacionAdicional[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Buscar archivos" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><span> </span><button id="input_print_2" type="button" class="form-submit-print form-submit-button-orange-500 jf-form-buttons" data-component="button"><img src="https://cdn.jotfor.ms/images/printer.png" style="vertical-align:middle" alt="Imprimir" /><span id="span_print_2" class="span_print">Imprimir</span></button><button id="input_2" type="submit" class="form-submit-button form-submit-button-orange-500 submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">Enviar</button></div>
+          <div class="form-submit-clear-wrapper"><button id="input_reset_2" type="reset" class="form-submit-reset form-submit-button-orange-500 jf-form-buttons" data-component="button">Limpiar</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Go to “Installations” section,";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="250744363468059" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='250744363468059'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "250744363468059-250744363468059";
+    }
+  </script>
+</form>
+<link id=color-scheme-style href="https://cdn01.jotfor.ms/stylebuilder/static/color-scheme.css?v=3.3.61747" type="text/css" rel="stylesheet" /><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.forwardToEu=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
